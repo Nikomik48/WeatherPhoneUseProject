@@ -22,3 +22,14 @@ Bringing Data into Daily Life:
  - If I discover clear trends in my screen time and phone habits, I can use these insights to make more mindful decisions about technology use.
 Applying my newly learned skills for DSA in something real:
  - Practice is really important in order to make my skills long lasting.
+
+# Data
+Weather:
+ - Average Temperature
+ - Precipitation rate
+ - Weather type
+
+Phone Usage:
+ - Number of photos taken
+ - Social media usage
+ - Total screen time
