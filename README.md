@@ -29,6 +29,14 @@ Weather:
  - Precipitation rate
  - Weather type
 
+Additional Factors:
+ - Weekend / Weekday information
+ - Number of lecture by day
+ - Focus Time
+ - Wake up time
+ - Sleep time
+ - Number of Notification
+
 Phone Usage:
  - Number of photos taken
  - Social media usage
