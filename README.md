@@ -41,3 +41,15 @@ Phone Usage:
  - Number of photos taken
  - Social media usage
  - Total screen time
+
+# Example Data Table
+
+Weather & Phone Usage Data
+
+| Date       | Avg Temp (°C) | Precip. Rate (mm) | Weather Type | Weekend/Weekday | Lectures | Focus Time (min) | Wake Up Time | Sleep Time | Notifications | Photos Taken | Social Media (min) | Screen Time (min) |
+|------------|--------------|-------------------|--------------|----------------|----------|------------------|--------------|------------|--------------|--------------|------------------|------------------|
+| 2025-03-01 | 29           | 0.45              | Snowy        | Weekday        | 4        | 288              | 10:46 AM     | 10:15 PM   | 181          | 8            | 234              | 509              |
+| 2025-03-02 | 9            | 2.30              | Snowy        | Weekday        | 0        | 57               | 8:18 AM      | 12:58 PM   | 274          | 36           | 114              | 229              |
+| 2025-03-03 | 21           | 5.24              | Snowy        | Weekday        | 2        | 186              | 10:32 AM     | 12:41 PM   | 70           | 3            | 103              | 370              |
+| 2025-03-04 | 29           | 1.87              | Rainy        | Weekday        | 4        | 114              | 10:51 AM     | 10:02 PM   | 220          | 6            | 149              | 356              |
+| 2025-03-05 | 21           | 7.25              | Sunny        | Weekday        | 2        | 174              | 6:41 AM      | 10:29 PM   | 292          | 13           | 155              | 475              |
