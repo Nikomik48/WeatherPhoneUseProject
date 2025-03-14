@@ -23,6 +23,9 @@ Bringing Data into Daily Life:
 Applying my newly learned skills for DSA in something real:
  - Practice is really important in order to make my skills long lasting.
 
+# Methodology
+Some other factors should be considered while analysing the relationship between weather conditions and phone usage. For instance, the phone itself can encourage me to use it by sending notifications. Or the time I am awake in a single day determines the time I can spend on my phone. Also, sometimes, when I have lots of courses, I won't be able to look at my phone and use it that much. Therefore, I should also have these factors in scope. 
+
 # Data
 Weather:
  - Average Temperature
@@ -31,11 +34,11 @@ Weather:
 
 Additional Factors:
  - Weekend / Weekday information
- - Number of lecture by day
+ - Number of lectures by day
  - Focus Time
  - Wake up time
  - Sleep time
- - Number of Notification
+ - Number of Notifications
 
 Phone Usage:
  - Number of photos taken
