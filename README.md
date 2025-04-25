@@ -70,19 +70,23 @@ In this phase, we began by preprocessing the dataset that includes both weather 
 - Grouped and compared daily behaviors by Is_Weekend and Weather Group (Clean Weather vs Others).
 
 - Visualized correlations among key numerical variables like Notifications, Social Media, Screen Time, Focus Time, Temperature, Precipitation, and photo metrics.
-  > image of correlation
+  > ![Correlation Matrix](images/correlation_matrix.png)
   
-- All refined data has been visualised as graphs
-  > image of numeric
+- All refined data has been visualised as graphs. Two samples below:
+  > ![Numeric Data Graphs 1](images/numeric_data_graphs.png)
+  > ![Numeric Data Graphs 2](images/sample_chart_of_numeric_2.png)
 
 - Plotted bar charts to investigate distribution differences between weekend/weekday and weather groups.
-  > image of categorical
+  > ![Categorical Data Graphs](images/categorical_data_graphs.png)
 
 - Created a scatterplot to analyze the relation between average temperature and number of photos taken.
-  > image of scatterplots
+  > ![Scatterplots](images/scatterplots.png)
 
 - Additional charts were created to compare significant variables from the dataset.
-  > images of all charts
+  > ![Comperation 1](images/temperature_photo_graph.png)
+  > ![Comperation 2](images/photos_rain_graph.png)
+  > ![Comperation 3](images/outdoor_photos_clean_weather.png)
+
 
 # Hypothesis Testing
 
@@ -113,3 +117,13 @@ HA: There is a correlation between average temperature and number of photos take
 Test Used: Pearson correlation coefficient.
 
 For each test, we validated sample sizes, dropped missing or irrelevant values, and ensured assumptions were satisfied before applying the tests.
+
+# Conclusion
+- **Hypothesis 1:** Since *p-value* < 0.05, we **reject the null hypothesis**.  
+  ➔ There is a significant difference in the number of outdoor photos taken between clean weather and other days.
+
+- **Hypothesis 2:** Since *p-value* > 0.05, we **fail to reject the null hypothesis**.  
+  ➔ There is no significant difference in average screen time between weekdays and weekends.
+
+- **Hypothesis 3:** Since *p-value* < 0.05, we **reject the null hypothesis**.  
+  ➔ There is a significant correlation between temperature and the number of photos taken.
