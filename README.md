@@ -128,7 +128,7 @@ For each test, we validated sample sizes, dropped missing or irrelevant values, 
 - **Hypothesis 3:** Since *p-value* < 0.05, we **reject the null hypothesis**.  
   ➔ There is a significant correlation between temperature and the number of photos taken.
 
-## 📢 Discussion & Interpretation
+## Discussion & Interpretation
 
 The analysis conducted in this project aimed to investigate the potential relationship between daily weather conditions and individual phone usage behavior. Although the dataset was limited to a single participant's experience, several noteworthy patterns emerged.
 
