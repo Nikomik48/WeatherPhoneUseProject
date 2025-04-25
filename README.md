@@ -127,3 +127,20 @@ For each test, we validated sample sizes, dropped missing or irrelevant values, 
 
 - **Hypothesis 3:** Since *p-value* < 0.05, we **reject the null hypothesis**.  
   ➔ There is a significant correlation between temperature and the number of photos taken.
+
+## 📢 Discussion & Interpretation
+
+The analysis conducted in this project aimed to investigate the potential relationship between daily weather conditions and individual phone usage behavior. Although the dataset was limited to a single participant's experience, several noteworthy patterns emerged.
+
+Across the data collected, precipitation appeared to show a modest association with increased phone usage, suggesting that unfavorable weather conditions may encourage more indoor screen time. In contrast, variables such as temperature, humidity, and wind speed demonstrated no consistent or statistically meaningful relationship with phone usage, highlighting that not all weather factors equally influence digital habits.
+
+Importantly, while some correlations were observed, it is crucial to interpret these findings with caution. Behavioral patterns like phone usage are influenced by a multitude of factors beyond weather alone, including psychological state, academic workload, social engagements, and daily routines. Without controlling for these confounding variables, it is not possible to claim a direct causal link.
+
+Furthermore, the reliance on a single-subject dataset inherently limits the generalizability of these results. Individual lifestyle, preferences, and even mood fluctuations can create patterns that do not necessarily reflect broader population trends.
+
+Nevertheless, the project highlights a plausible behavioral trend worth exploring further:  
+*Weather conditions, particularly rainy days, may nudge individuals towards increased engagement with their phones, possibly as a substitute for reduced outdoor activities.*
+
+This preliminary finding aligns with broader behavioral economics theories suggesting that environmental factors subtly shape human decision-making and technology use.
+
+Future studies with larger, more diverse samples and additional control variables would be necessary to validate and expand upon these observations.
