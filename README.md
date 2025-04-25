@@ -49,10 +49,10 @@ Phone Usage:
 
 Weather & Phone Usage Data
 
-| Date       | Avg Temp (°C) | Precip. Rate (mm) | Weather Type | Weekend/Weekday | Lectures | Focus Time (min) | Wake Up Time | Sleep Time | Notifications | Photos Taken | Social Media (min) | Screen Time (min) |
-|------------|--------------|-------------------|--------------|----------------|----------|------------------|--------------|------------|--------------|--------------|------------------|------------------|
-| 2025-03-01 | 29           | 0.45              | Snowy        | Weekday        | 4        | 288              | 10:46 AM     | 10:15 PM   | 181          | 8            | 234              | 509              |
-| 2025-03-02 | 9            | 2.30              | Snowy        | Weekday        | 0        | 57               | 8:18 AM      | 12:58 PM   | 274          | 36           | 114              | 229              |
-| 2025-03-03 | 21           | 5.24              | Snowy        | Weekday        | 2        | 186              | 10:32 AM     | 12:41 PM   | 70           | 3            | 103              | 370              |
-| 2025-03-04 | 29           | 1.87              | Rainy        | Weekday        | 4        | 114              | 10:51 AM     | 10:02 PM   | 220          | 6            | 149              | 356              |
-| 2025-03-05 | 21           | 7.25              | Sunny        | Weekday        | 2        | 174              | 6:41 AM      | 10:29 PM   | 292          | 13           | 155              | 475              |
+| Date       | Wake Up Time | Sleep Time | Notifications | Social Media (min) | Screen Time (min) | Focus Time (min) | Is_Weekend | Lecture Count | Avg Temperature (°C) | Precipitation Rate (mm) | Weather Type          | Number of Photots taken | Photos Taken Outdoor |
+|------------|---------------|-------------|----------------|---------------------|--------------------|-------------------|-------------|----------------|------------------------|--------------------------|------------------------|--------------------------|------------------------|
+| 14-03-2025 | 8.2           | 1.10        | 233.0          | 125.0               | 177                | 165.0             | 0           | 5              | 18.9                   | 0.00                     | Partially cloudy       | 20                       | 20                     |
+| 15-03-2025 | 11.0          | 0.46        | 69.0           | 150.0               | 116                | 172.0             | 1           | 0              | 19.7                   | 0.00                     | Partially cloudy       | 16                       | 14                     |
+| 16-03-2025 | 9.2           | 2.28        | 178.0          | 110.0               | 187                | 219.0             | 1           | 0              | 22.1                   | 0.00                     | Partially cloudy       | 24                       | 20                     |
+| 17-03-2025 | 8.2           | 0.12        | 211.0          | 149.0               | 183                | 158.0             | 0           | 8              | 15.6                   | 1.22                     | Rain, Partially cloudy | 26                       | 24                     |
+| 18-03-2025 | 8.4           | 0.18        | 492.0          | 181.0               | 133                | 202.0             | 0           | 5              | 6.8                    | 9.45                     | Rain, Partially cloudy | 6                        | 6                      |
