@@ -56,3 +56,60 @@ Weather & Phone Usage Data
 | 16-03-2025 | 9.2           | 2.28        | 178.0          | 110.0               | 187                | 219.0             | 1           | 0              | 22.1                   | 0.00                     | Partially cloudy       | 24                       | 20                     |
 | 17-03-2025 | 8.2           | 0.12        | 211.0          | 149.0               | 183                | 158.0             | 0           | 8              | 15.6                   | 1.22                     | Rain, Partially cloudy | 26                       | 24                     |
 | 18-03-2025 | 8.4           | 0.18        | 492.0          | 181.0               | 133                | 202.0             | 0           | 5              | 6.8                    | 9.45                     | Rain, Partially cloudy | 6                        | 6                      |
+
+# Exploratory Data Analysis (EDA)
+
+In this phase, we began by preprocessing the dataset that includes both weather and personal phone usage information from March 14 to April 25, 2025. After ensuring the dataset was clean and consistent, we carried out various exploratory data analysis steps:
+
+- Converted date formats and ensured proper column naming (e.g., correcting "Number of Photots taken" to "Photos Taken").
+
+- Filled missing values with column-wise mean values to maintain consistency and statistical integrity.
+
+- Created new features such as Time Out Social Media, calculated as the difference between total screen time and time spent on social media.
+
+- Grouped and compared daily behaviors by Is_Weekend and Weather Group (Clean Weather vs Others).
+
+- Visualized correlations among key numerical variables like Notifications, Social Media, Screen Time, Focus Time, Temperature, Precipitation, and photo metrics.
+  > image of correlation
+  
+- All refined data has been visualised as graphs
+  > image of numeric
+
+- Plotted bar charts to investigate distribution differences between weekend/weekday and weather groups.
+  > image of categorical
+
+- Created a scatterplot to analyze the relation between average temperature and number of photos taken.
+  > image of scatterplots
+
+- Additional charts were created to compare significant variables from the dataset.
+  > images of all charts
+
+# Hypothesis Testing
+
+We defined three main hypotheses to evaluate using the dataset:
+
+## Hypothesis 1: Weather condition affects the number of outdoor photos taken
+
+H0 (Null Hypothesis): The average number of outdoor photos taken is the same on good weather days and other days.
+
+HA (Alternative Hypothesis): The average number of outdoor photos taken is different on good weather days and other days.
+
+Test Used: Independent two-sample t-test (after filtering out zero/outlier values).
+
+## Hypothesis 2: Weekend status affects screen time
+
+H0: The average screen time is the same on weekends and weekdays.
+
+HA: The average screen time is different on weekends and weekdays.
+
+Test Used: Independent two-sample t-test.
+
+## Hypothesis 3: Temperature is correlated with number of photos taken
+
+H0: There is no correlation between average temperature and number of photos taken.
+
+HA: There is a correlation between average temperature and number of photos taken.
+
+Test Used: Pearson correlation coefficient.
+
+For each test, we validated sample sizes, dropped missing or irrelevant values, and ensured assumptions were satisfied before applying the tests.
