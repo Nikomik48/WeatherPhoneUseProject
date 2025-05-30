@@ -144,3 +144,135 @@ Nevertheless, the project highlights a plausible behavioral trend worth explorin
 This preliminary finding aligns with broader behavioral economics theories suggesting that environmental factors subtly shape human decision-making and technology use.
 
 Future studies with larger, more diverse samples and additional control variables would be necessary to validate and expand upon these observations.
+
+# Phase 3 - Prediction
+## 🔍 Model-Based Analysis: Regression and Classification
+
+After testing our hypotheses statistically, we applied several machine learning models to further explore the predictive potential of the dataset. These models aimed either to **predict the number of photos taken** (regression) or **classify high-photo days** (classification).
+
+---
+
+### Regression Models
+
+We trained and evaluated 4 regression models:
+
+| Model                 | Goal                           |
+|----------------------|---------------------------------|
+| Linear Regression     | Baseline trend fit              |
+| Decision Tree         | Split-based modeling            |
+| Random Forest         | Ensemble of trees               |
+| KNN Regressor         | Distance-based estimation       |
+
+Each model was evaluated using:
+- **Mean Absolute Error (MAE)**
+- **R² Score**
+- **Residual Visualizations**
+
+---
+
+#### MAE Comparison (5-Fold Cross Validation)
+
+MAE provides an average of the absolute differences between predicted and actual values. Lower values are better.
+
+![MAE Barplot](images/Cross-Validated%20MAE%20Comparison.png)
+
+![MAE Comparison](images/Mean%20Absolute%20Error%20Comparison.png)
+
+---
+
+#### R² Score Comparison
+
+R² scores give insight into how well the model explains variance in the target variable. Values closer to 1 are better, but negative values indicate poor performance.
+
+![R² Comparison](images/R-Squared%20Score%20Comparison.png)
+
+---
+
+### Residual Visualizations
+
+These visualizations show how far predictions deviate from the actual values. Each model is represented with:
+	•	Actual vs Predicted: How close predictions were to the real values
+	•	Residual Lines: Distance between predictions and the ideal (perfect) prediction line
+
+**Linear Regression**
+
+Although Linear Regression tries to fit a global line across all data, it performed poorly on this dataset. Residuals are large and widespread.
+- Residuals between actual vs predicted — large errors, especially for outliers.
+- Ideally, points should lie close to the red diagonal line (perfect prediction).
+![Linear - Residuals](images/Linear%20Regression%20%E2%80%93%20Residual%20Lines.png)  
+![Linear - Actual vs Predicted](images/Linear%20Regression-%20Actual%20vs%20Predicted.png)
+
+**Decision Tree Regressor**
+
+Captures local patterns better but overfits on extreme values.
+- Shorter residual lines for common values, but misses the long-tail data.
+- Some predictions cluster tightly, but higher values are missed.
+![DT - Residuals](images/Decision%20Tree%20Regressor%20%E2%80%93%20Residual%20Lines.png)  
+![DT - Actual vs Predicted](images/Decision%20Tree%20Regressor-%20Actual%20vs%20Predicted.png)
+
+**Random Forest Regressor**
+
+More stable than a single tree. Residuals are shorter on average.
+- Most residuals are tighter and closer to actual values.
+- Predictions tend to follow the red line more consistently.
+![RF - Residuals](images/Random%20Forest%20Regressor%20%E2%80%93%20Residual%20Lines.png)  
+![RF - Actual vs Predicted](images/Random%20Forest%20Regressor-%20Actual%20vs%20Predicted.png)
+
+**KNN Regressor**
+
+Prediction heavily influenced by nearby data. Misses trends on rare or outlier days.
+- Residuals grow when no similar prior cases exist.
+- Most points lie low — it underestimates high values.
+  
+![KNN - Residuals](images/KNN%20Regressor%20%E2%80%93%20Residual%20Lines.png)  
+![KNN - Actual vs Predicted](images/KNN%20Regressor-%20Actual%20vs%20Predicted.png)
+
+---
+
+### Regression Results Summary
+
+| Model              | MAE (↓ better) | R² Score (↑ better) |
+|-------------------|----------------|----------------------|
+| Linear Regression | 10.47          | ~-1.37               |
+| Decision Tree     | 12.16          | ~-0.29               |
+| Random Forest     | 9.22           | ~-0.16               |
+| KNN Regressor     | 9.47           | ~-0.13               |
+
+While Random Forest and KNN had the lowest MAE, **none of the models produced a strong R² score**, indicating poor overall explanatory power. These results reinforce the idea that daily phone usage is influenced by complex and perhaps unrecorded personal variables.
+
+---
+
+### Classification: Logistic Regression
+
+We also implemented a simple **Logistic Regression model** to classify **high-photo days** (more than 10 photos taken) based on weather and phone usage behavior.
+
+#### Confusion Matrix
+
+![Confusion Matrix](images/Logistic%20Regression%20%E2%80%93%20Confusion%20Matrix.png)
+
+- **Accuracy:** ~0.51  
+- **Precision:** High (few false positives)  
+- **Recall:** Low (many missed positive cases)
+
+The model was better at identifying days with low activity but struggled to detect high-photo days. This is likely due to class imbalance and limited training data.
+
+---
+
+### Final Interpretation
+
+- **Regression Models**: Unable to reliably predict numeric photo behavior. Even the best models had poor generalization power.
+- **Classification Model**: Showed promise in separating days by activity, but was ultimately limited by class imbalance and sample size.
+- **Conclusion**: While some weak patterns exist (e.g., rainy days → higher phone usage), **human behavior remains too complex** for accurate modeling with this data alone.
+
+This section underscores the **limits of prediction on behavioral data**, especially with small, personal datasets.
+
+---
+
+## Summary Table
+
+| Task                      | Result                                  |
+|---------------------------|------------------------------------------|
+| Predict photo counts      | ❌ Poor regression results (low R²)       |
+| Classify high-photo days  | ⚠️ Partial success (low recall)           |
+| Best regression model     | ✅ Random Forest (lowest MAE)             |
+| Overall insights          | Modeling behavior is not as good as expected :(|
